@@ -1,0 +1,121 @@
+1. Cadena de Caracteres
+
+Diseñe un algoritmo que a partir de una secuencia de caracteres con marca final de entrada, calcule:
+
+a. La longitud de la misma
+
+Entrada: CC con marca final "0"
+Salida: longitud - Natural
+
+01. Inicializar
+02. Leer (CC)
+03. Calculo
+04. Escribir(longitud)
+05. Fin
+
+01. Inicializar
+    longitud <- 0
+
+02. Calculo
+    MIENTRAS(CC <> 0)
+        longitud <- longitud + 1
+        Leer(CC)
+    FIN MIENTRAS
+
+b. Cantidad total de vocales
+
+Entrada: CC con marca final "0":Char.
+Salida: vocales: Entero.
+
+01. Inicializar
+02. Leer (CC)
+03. Calculo
+04. Escribir(vocales)
+05. Fin
+
+01. Inicializar
+    vocales <- 0
+
+02. Calculo
+    MIENTRAS(CC <> 0)
+        SEGUN (CC) 
+            a: vocal <- vocal + 1
+            e: vocal <- vocal + 1
+            i: vocal <- vocal + 1
+            o: vocal <- vocal + 1
+            u: vocal <- vocal + 1
+        FIN SEGUN
+        Leer(CC)
+    FIN MIENTRAS
+
+c. Busque y cuente la cantidad de apariciones de una vocal ingresada como dato.
+
+Entrada: CC con marca final "0": CHAR, vocal: char.
+Salida: vocal: Entero.
+
+01. Inicializar
+02. Leer (CC)
+03. Leer (vocal)
+04. Calculo
+05. Escribir(vocal)
+06. Fin
+
+01. Inicializar
+    vocal <- 0
+
+02. Calcular
+    MIENTRAS(CC <> 0)
+        SI(CC = vocal)
+            vocal <- vocal + 1
+        FIN SI
+        Leer(CC)
+    FIN MIENTRAS
+
+d. Cantidad de palabras.
+
+Entrada: CC con marca final "0":Char.
+Salida: palabras: Entero
+
+01. Inicializar
+02. Leer (CC)
+03. Calculo
+04. Escribir(palabras)
+05. Fin
+
+01. Inicializar
+    ant <- " "
+    palabras <- 0
+
+02. Calcular
+    MIENTRAS(CC <> 0)
+        SI(ant = " " ∧ cc <> " ")
+            palabras <- palabras + 1
+        FIN SI
+        ant <- CC
+        Leer(CC)
+    FIN MIENTRAS
+
+e. Cantidad de palabras que inician con una letra ingresada como dato de entrada.
+
+Entrada: CC con marca final "0":Char. letra: Char.
+Salida:
+
+01. Inicializar
+02. Leer(letra)
+03. Leer(CC)
+04. Calculo
+05. Escribir(palabra)
+06. Fin
+
+01. Inicializar
+    ant <- " ".
+    palabra <- 0
+
+02. Calculo
+    MIENTRAS(CC <> 0)
+    SI(ant = " " ∧ cc = letra)
+        palabra <- palabra + 1
+    FIN SI
+    ant <- CC
+    Leer(CC)
+    FIN MIENTRAS

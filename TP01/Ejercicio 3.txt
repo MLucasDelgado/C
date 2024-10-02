@@ -1,0 +1,3 @@
+PROCEDIMIENTO calcular_MCD_y_MCM (A, B): entero, entero
+	SI (A > B) ENTONCES
+		

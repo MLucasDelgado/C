@@ -1,0 +1,38 @@
+Algoritmo: Trasmontaña
+Entrada: sector: (A, B, C, D), box: (1, 2, 3)
+Salida: Monto_total
+
+A0. Inicializar
+A1. LEER(sector, box)
+A2. CALCULAR
+A3. ESCRIBIR(Monto_total)
+A4. PARAR
+
+
+A0. INICIALIZAR
+	Monto_total <-- 0
+
+FUNCION calcular_monto (sector, box): entero, real --> real
+	monto_parcial <-- 0
+	SEGUN (sector)
+		A: monto_parcial <-- 250.000
+		B: monto_parcial <-- 200.000
+		C: monto_parcial <-- 175.000
+		D: monto_parcial <-- 320.000
+	FIN_SEGUN
+	SI (sector <> D) ENTONCES
+		SEGUN (box)
+			1: monto_parcial <-- monto_parcial + (monto_parcial * 0.25)
+			2: monto_parcial <-- monto_parcial + (monto_parcial * 0.40)
+			3: monto_parcial <-- monto_parcial + (monto_parcial * 0.50)
+		FIN_SEGUN
+	FIN_SI	
+    RETORNA monto_parcial;
+FIN_FUNCION
+
+A2. CALCULAR
+	HACER(65) VECES
+		monto_cliente <-- calcular_monto(sector, box)
+		ESCRIBIR(monto_cliente)
+		Monto_final <-- Monto_final + monto_cliente
+	FIN_HACER

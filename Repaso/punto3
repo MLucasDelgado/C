@@ -1,0 +1,31 @@
+ALGORITMO: Matrices
+ENTRADA: matriz: matriz de enteros
+SALIDA: transpuesta: matriz de enteros
+CONSTANTE: tama: entero
+
+
+A0. INICIALIZAR
+A1. transponerMatriz (matriz, transpuesta, tama)
+A2. mostrarMatriz (transpuesta, tama)
+A3. PARAR
+
+
+A1. PROCEDIMIENTO transponerMatriz (matriz, transpuesta, tama): matriz de enteros, matriz de enteros, entero
+        var aux: i, j: entero
+
+        HACER tama VECES (i=0, ..., tama)
+                ACER tama VECES (j=0, ..., tama)
+                transpuesta[j][i] <-- matriz[i][j]
+            FIN_HACER
+        FIN_HACER
+    FIN_PROCEDIMIENTO
+
+A2. PROCEDIMIENTO mostrarMatriz (transpuesta, tama): matriz de enteros, entero
+        var aux: i, j: entero
+
+        HACER tama VECES (i=0, ..., tama)
+            HACER tama VECES (j=0, ..., tama)
+                ESCRIBIR(transpuesta[j][i])
+            FIN_HACER
+        FIN_HACER
+    FIN_PROCEDIMIENTO

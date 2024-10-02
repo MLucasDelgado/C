@@ -1,0 +1,33 @@
+ALGORITMO: ORACIONES
+ENTRADA: frase: CC (MF '.')
+SALIDA: cant_on: entero
+VAR AUX: caracter_anterior1, caracter_anterior2
+
+
+A0. INICIALIZAR
+A1. LEER (frase)
+A2. CALCULAR_PALABRAS
+A3. ESCRIBIR (cant_on)
+A4. PARAR
+
+A0. INICIALIZAR
+    cant_on <-- 0
+    caracter_anterior1 <-- ' '
+    caracter_anterior2 <-- ' '
+
+A2. CALCULAR_PALABRAS
+        MIENTRAS (frase <> '.')
+                SI(frase <> ' ') ENTONCES
+                    SI (caracter_anterior2 = 'o' && caracter_anterior1 = 'n') ENTONCES
+                        cant_on <-- cant_on + 1
+                    FIN_SI
+                FIN_SI
+
+                caracter_anterior2 <-- caracter_anterior1
+                caracter_anterior1 <-- frase
+            LEER(frase)
+        FIN_MIENTRAS
+
+
+
+

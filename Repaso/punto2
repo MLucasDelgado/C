@@ -1,0 +1,43 @@
+ALGORITMO: Areas
+ENTRADA: opcion: entero; base, altura, radio: real
+SALIDA: areaTriangulo, areaCirculo, areaRectangulo: real
+CONSTANTES: PI = 3.14
+
+A0. INICIALIZAR
+        areaTriangulo <-- 0
+        areaCirculo <-- 0
+        areaRectangulo <-- 0
+
+A1. CALCULAR_AREAS
+        HACER
+            LEER (opcion)
+                SEGUN (opcion)
+                    1:  LEER (base, altura)
+                        areaTriangulo <-- calcularAreaTriangulo(base, altura)
+                        ESCRIBIR (areaTriangulo)
+
+                    2:  LEER (base, altura)
+                        areaCirculo <-- CalcularAreaCirculo(radio)
+                        ESCRIBIR (areaCirculo)
+                    
+                    3:  LEER (base, altura)
+                        areaRectangulo <-- CalcularAreaRectangulo(base, altura)
+                        ESCRIBIR (areaRectangulo)
+                    
+                    SINO: ESCRIBIR(Opcion no valida.)
+                FIN_SEGUN
+        MIENTRAS (opcion <= 3)
+
+A2. PARAR
+
+FUNCION CalcularAreaCirculo (base, altura) real, real --> real
+    area = (base * altura) / 2
+    RETORNA area
+
+FUNCION calcularAreaTriangulo (radio) real --> real
+    area = PI * radio * radio
+    RETORNA area
+
+FUNCION CalcularAreaRectangulo (base, altura) real, real --> real
+    area = (base * altura)
+    RETORNA area

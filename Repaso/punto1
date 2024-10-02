@@ -1,0 +1,21 @@
+ALGORITMO: ORACIONES
+ENTRADA: frase: CC (MF '.'), vocal: CC
+SALIDA: frase: CC
+
+A1. MODIFICAR_ORACION
+A2. PARAR
+
+A1. MODIFICAR_ORACION
+        HACER
+            LEER(vocal)
+        MIENTRAS (vocal <> 'a' && vocal <> 'e' && vocal <> 'i' && vocal <> 'o' && vocal <> 'u')
+
+        LEER(frase)
+        MIENTRAS (frase <> '.')
+            SI (frase = a || frase = e || frase = i || frase = o || frase = u ) ENTONCES
+                frase <-- vocal
+            FIN_SI
+
+            ESCRIBIR(frase)
+            LEER(frase)
+        FIN_MIENTRAS
