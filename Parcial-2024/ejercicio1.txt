@@ -1,0 +1,41 @@
+
+<--------------------------------PSEUDOCÓDIGO-------------------------------->
+
+ALGORITMO: Oraciones.
+ENTRADA: frase: CC (MF = '.').
+SALIDA: cant_errores, palabra_grande: entero.
+VAR. AUX: caracter_anterior_1: ' ', caracter_anterior_2: ' ', palabra_chica, long_palabra: entero.
+
+A0. INICIALIZAR
+A1. LEER (frase)
+A2. MOSTRAR
+A3. ESCRIBIR (cant_errores, palabra_grande)
+A4. PARAR
+
+A0. INICIALIZAR
+        cant_errores <-- 0
+        cant_caracteres <-- 0
+
+A2. MOSTRAR
+        MIENTRAS (frase <> '.')
+            SI (frase <> ' ' && frase <> '.') ENTONCES
+                long_palabra <-- long_palabra + 1
+            SINO
+                SI (long_palabra > palabra_grande) ENTONCES
+                    palabra_grande <-- long_palabra
+                FIN_SI
+
+                SI (long_palabra < palabra_chica && long_palabra > 0) ENTONCES
+                    palabra_chica <-- long_palabra
+                FIN_SI
+            FIN_SINO
+            FIN_SI
+
+            SI (caracter_anterior_2 = 'n' && caracter_anterior_1 = 'p') ENTONCES
+                cant_errores++
+            FIN_SI
+
+            caracter_anterior_2 <-- caracter_anterior_1
+            caracter_anterior_1 <-- frase
+            LEER(frase)
+        FIN_MIENTRAS
